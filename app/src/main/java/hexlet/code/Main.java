@@ -30,6 +30,12 @@ public class Main {
             } else if (userChoose == 4) {
                 Gcd gcd = new Gcd();
                 Engine.run(gcd.getDescription(), gcd.getResults(), gcd.getQuestions());
+            } else if (userChoose == 5) {
+                Progression progression = new Progression();
+                Engine.run(
+                        progression.getDescription(),
+                        progression.getResults(),
+                        progression.getQuestions());
             }
         }
     }
@@ -42,6 +48,7 @@ public class Main {
                 2 - Even
                 3 - Calculator
                 4 - GCD
+                5 - Progression
                 0 - Exit
                 """);
         int choose;
