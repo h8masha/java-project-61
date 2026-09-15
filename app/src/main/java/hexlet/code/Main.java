@@ -1,6 +1,5 @@
 package hexlet.code;
 
-import java.time.LocalDateTime;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -20,14 +19,9 @@ public class Main {
             } else if (userChoose == 1) {
                 Main.greeting();
             } else if (userChoose == 2) {
-                Main.even();
+                Even.even();
             }
         }
-    }
-
-    private static int generator() {
-        LocalDateTime dateTime = LocalDateTime.now();
-        return dateTime.getSecond() * dateTime.getDayOfMonth();
     }
 
     public static String greeting() {
@@ -35,34 +29,6 @@ public class Main {
         String userName = Cli.call();
         System.out.println("Hello, " + userName + "!");
         return userName;
-    }
-
-    public static void even() {
-        String userName = Main.greeting();
-        Scanner scan = new Scanner(System.in);
-        boolean isAllCorrect = true;
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        for (int i = 0; i < 3; i++) {
-            int digit = Main.generator();
-            System.out.println("Question: " + digit);
-            String res = digit % 2 == 0 ? "yes" : "no";
-            String userChoose = scan.nextLine();
-            if (res.equalsIgnoreCase(userChoose)) {
-                System.out.println("Correct!");
-            } else {
-                System.out.println(
-                        "'"
-                                + userChoose
-                                + "' is wrong answer ;(. Correct answer was '"
-                                + res
-                                + "'.");
-                System.out.println("Let's try again, " + userName + "!");
-                isAllCorrect = false;
-            }
-        }
-        if (isAllCorrect) {
-            System.out.println("Congratulations, " + userName + "!");
-        }
     }
 
     public static int mainLoop() {
