@@ -27,6 +27,9 @@ public class Main {
                         calculator.getDescription(),
                         calculator.getResults(),
                         calculator.getQuestions());
+            } else if (userChoose == 4) {
+                Gcd gcd = new Gcd();
+                Engine.run(gcd.getDescription(), gcd.getResults(), gcd.getQuestions());
             }
         }
     }
@@ -38,6 +41,7 @@ public class Main {
                 1 - Greet
                 2 - Even
                 3 - Calculator
+                4 - GCD
                 0 - Exit
                 """);
         int choose;
