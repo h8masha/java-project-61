@@ -36,6 +36,11 @@ public class Main {
                         progression.getDescription(),
                         progression.getResults(),
                         progression.getQuestions());
+            } else if (userChoose == 6) {
+                Prime prime = new Prime();
+                Engine.run(prime.getDescription(), prime.getResults(), prime.getQuestions());
+            } else {
+                System.out.println("Your input number isn't exist in a list of games. Try again");
             }
         }
     }
@@ -49,6 +54,7 @@ public class Main {
                 3 - Calculator
                 4 - GCD
                 5 - Progression
+                6 - Prime
                 0 - Exit
                 """);
         int choose;
