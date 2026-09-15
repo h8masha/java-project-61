@@ -26,6 +26,7 @@ public class Engine {
                                 + "' is wrong answer ;(. Correct answer was '"
                                 + result[i]
                                 + "'");
+                System.out.println("Let's try again, " + userName + "!");
                 //System.out.println("You need 3 of 3 correct answers to win. Better luck next time!");
                 return;
             }

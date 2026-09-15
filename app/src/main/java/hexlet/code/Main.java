@@ -17,31 +17,38 @@ public class Main {
             } else if (userChoose == 0) {
                 break;
             } else if (userChoose == 1) {
-                Cli.call();
+                String name = Cli.call();
+                System.out.println("Hello, " + name + "!");
                 break;
             } else if (userChoose == 2) {
                 Even even = new Even();
                 Engine.run(even.getDescription(), even.getResults(), even.getQuestions());
+                break;
             } else if (userChoose == 3) {
                 Calculator calculator = new Calculator();
                 Engine.run(
                         calculator.getDescription(),
                         calculator.getResults(),
                         calculator.getQuestions());
+                break;
             } else if (userChoose == 4) {
                 Gcd gcd = new Gcd();
                 Engine.run(gcd.getDescription(), gcd.getResults(), gcd.getQuestions());
+                break;
             } else if (userChoose == 5) {
                 Progression progression = new Progression();
                 Engine.run(
                         progression.getDescription(),
                         progression.getResults(),
                         progression.getQuestions());
+                break;
             } else if (userChoose == 6) {
                 Prime prime = new Prime();
                 Engine.run(prime.getDescription(), prime.getResults(), prime.getQuestions());
+                break;
             } else {
                 System.out.println("Your input number isn't exist in a list of games. Try again");
+                break;
             }
         }
     }
