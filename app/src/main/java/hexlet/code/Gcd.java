@@ -30,8 +30,8 @@ public class Gcd {
         this.questions = new String[Engine.NUMBER_OF_GAMES_ITERATIONS];
         this.description = "Find the greatest common divisor of given numbers.";
         for (int i = 0; i < Engine.NUMBER_OF_GAMES_ITERATIONS; i++) {
-            int first = this.generate();
-            int second = this.generate();
+            int first = this.generate() + 1;
+            int second = this.generate() + 1;
             int res = this.getGcd(first, second);
             this.questions[i] = "Question: " + first + " " + second;
             this.results[i] = Integer.toString(res);

@@ -17,6 +17,7 @@ public class Main {
             } else if (userChoose == 0) {
                 break;
             } else if (userChoose == 1) {
+                System.out.println("Welcome to the Brain Games!");
                 String name = Cli.call();
                 System.out.println("Hello, " + name + "!");
                 break;
