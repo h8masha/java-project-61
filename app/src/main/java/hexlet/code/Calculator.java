@@ -20,11 +20,11 @@ public class Calculator {
         for (int i = 0; i < Engine.NUMBER_OF_GAMES_ITERATIONS; i++) {
             int tempA = this.generateRandomTo(99);
             int tempB = this.generateRandomTo(135);
-            int operation = this.generateRandomTo(3); // 1 - "+", 2 - "-", 3 - "*"
-            if (operation == 1) {
+            int operation = this.generateRandomTo(3); // 0 - "+", 1 - "-", 2 - "*"
+            if (operation == 0) {
                 questions[i] = "Question: " + tempA + " + " + tempB;
                 results[i] = Integer.toString(tempA + tempB);
-            } else if (operation == 2) {
+            } else if (operation == 1) {
                 questions[i] = "Question: " + tempA + " - " + tempB;
                 results[i] = Integer.toString(tempA - tempB);
             } else {

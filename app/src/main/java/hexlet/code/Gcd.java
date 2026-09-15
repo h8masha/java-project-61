@@ -33,7 +33,7 @@ public class Gcd {
             int first = this.generate();
             int second = this.generate();
             int res = this.getGcd(first, second);
-            this.questions[i] = "Questions: " + first + " " + second;
+            this.questions[i] = "Question: " + first + " " + second;
             this.results[i] = Integer.toString(res);
         }
     }

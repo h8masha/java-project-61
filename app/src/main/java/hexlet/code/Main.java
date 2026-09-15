@@ -18,6 +18,7 @@ public class Main {
                 break;
             } else if (userChoose == 1) {
                 Cli.call();
+                break;
             } else if (userChoose == 2) {
                 Even even = new Even();
                 Engine.run(even.getDescription(), even.getResults(), even.getQuestions());
@@ -63,6 +64,7 @@ public class Main {
         try {
             choose = scanner.nextInt();
         } catch (InputMismatchException e) {
+            scanner.nextLine();
             System.out.println("Your input isn't correct. Try again");
             choose = -1;
         }
