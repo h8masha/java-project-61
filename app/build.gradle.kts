@@ -1,9 +1,15 @@
 plugins {
     id("java")
+    application
+}
+
+application {
+    mainClass.set("hexlet.code.Main")
 }
 
 group = "hexlet.code"
 version = "1.0-SNAPSHOT"
+
 
 repositories {
     mavenCentral()
